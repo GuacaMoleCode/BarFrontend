@@ -10,6 +10,7 @@ import { SliderBlockComponent } from './components/slider-block/slider-block.com
 import { LiveFeedComponent } from './components/live-feed/live-feed.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DefaultBlockComponent } from './components/default-block/default-block.component';
+import { ScriptService } from './services/script/script.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -33,10 +34,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      //{ enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [ScriptService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

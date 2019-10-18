@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScriptService } from 'src/app/services/script/script.service';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scriptService: ScriptService) {
+    const scripts = ["slick", "custom"];
+    scriptService.loadInSequence(scripts);
+  }
 
   ngOnInit() {
   }
