@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  CMSEndpoint: 'https://localhost:1337/'
+  CMSEndpoint: 'http://localhost:1337/'
 };
 
 /*

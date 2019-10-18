@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PageBlocksService } from './page-blocks.service';
+import { CmsService } from './cms.service';
 
-describe('PageBlocksService', () => {
+describe('CmsService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: PageBlocksService = TestBed.get(PageBlocksService);
+    const service: CmsService = TestBed.get(CmsService);
     expect(service).toBeTruthy();
   });
 });

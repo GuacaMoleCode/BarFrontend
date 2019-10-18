@@ -588,6 +588,12 @@ img {
   opacity: 1;
 }
 
+.mu-slider-livefeed {
+  height: 100vh !important; 
+  width: 100vw !important; 
+  margin-top: 0 !important;
+}
+
 
 /*==================
 	ABOUT US SECTION
