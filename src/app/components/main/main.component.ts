@@ -8,9 +8,8 @@ import { ScriptService } from 'src/app/services/script/script.service';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private scriptService: ScriptService) {
-    const scripts = ["slick", "custom"];
-    scriptService.loadInSequence(scripts);
+  constructor(scriptService: ScriptService) {
+    scriptService.loadAll();
   }
 
   ngOnInit() {
