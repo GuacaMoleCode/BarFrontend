@@ -12,6 +12,7 @@
 #BASIC TYPOGRAPHY
 #HEADER SECTION
 #NAVBAR SECTION
+#DEFAULT SECTION
 #SLIDER SECTION
 #ABOUT US SECTION
 #COUNTER SECTION
@@ -383,6 +384,58 @@ img {
 .scrollToTop:hover,
 .scrollToTop:focus {
   color: #fff;
+}
+
+/*==================
+	DEFAULT SECTION
+====================*/
+
+#mu-default {
+  display: inline;
+  float: left;
+  margin-top: 90px;
+  width: 100%;
+  position: relative;
+  padding-top:50px;
+}
+.mu-default-area {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+.mu-default-right {
+  display: inline;
+  float: left;
+  margin-top: 20px;
+  padding-top: 30px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.mu-default-right ul {
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+.mu-default-right ul li {
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.mu-default-right ul li:before {
+  content: "\f0da";
+  font-family: fontAwesome;
+  margin-right: 10px;
+}
+
+.mu-default-left {
+  display: inline;
+  float: left;
+  margin-top: 20px;
+  padding-top: 30px;
+  padding-right: 15px;
+  width: 100%;
 }
 
 /*==================

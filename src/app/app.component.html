@@ -1,7 +1,1 @@
-<app-navigation-bar></app-navigation-bar>
-
-
-<!-- <slider-block *ngIf="pageBlocks"></slider-block> -->
-<div *ngFor="let block of pageBlocks; let i = index" >
-    <div {{block.pageBlocks.Type | lowercase }}-block></div>
-</div>
+<router-outlet></router-outlet>
