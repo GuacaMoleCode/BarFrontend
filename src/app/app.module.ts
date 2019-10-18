@@ -13,8 +13,7 @@ import { DefaultBlockComponent } from './components/default-block/default-block.
 import { ScriptService } from './services/script/script.service';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
-  { path: 'main', component: MainComponent },
+  { path: '', component: MainComponent },
   { path: 'livefeed', component: LiveFeedComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

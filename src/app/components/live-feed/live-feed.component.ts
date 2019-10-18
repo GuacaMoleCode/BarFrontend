@@ -8,8 +8,7 @@ import { ScriptService } from 'src/app/services/script/script.service';
 })
 export class LiveFeedComponent implements OnInit {
   constructor(scriptService: ScriptService) {
-    const scripts = ['slick', 'custom'];
-    scriptService.loadInSequence(scripts);
+    scriptService.loadAll();
   }
 
   ngOnInit() {}
