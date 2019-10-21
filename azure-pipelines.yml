@@ -9,15 +9,13 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+variables:
+  imageName: 'bar-frontend'
 
-- script: |
-    npm install -g @angular/cli
-    npm install -g typescript
-    npm install
-    ng build --prod
-  displayName: 'npm install and build'
+steps:
+- task: Docker@2
+  displayName: Build an image
+  inputs:
+    repository: $(imageName)
+    command: build
+    Dockerfile: app/Dockerfile
