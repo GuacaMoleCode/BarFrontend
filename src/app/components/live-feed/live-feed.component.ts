@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LiveFeedComponent implements OnInit {
 
-  private pages: LiveFeedPage[];
+  public pages: LiveFeedPage[];
   public imageEndpoint: string;
 
   constructor(
