@@ -26,7 +26,7 @@ RUN npm run build-prod
 # Run
 FROM nginx:alpine as prod-stage
 COPY --from=build-step /app/dist/BarFrontend /usr/share/nginx/html
-COPY --from=build-step /nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY --from=build-step /app/nginx-custom.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
