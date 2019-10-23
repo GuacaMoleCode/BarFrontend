@@ -1,3 +1,5 @@
+#stage 1
+
 # base image
 FROM node:12.2.0
 
@@ -18,7 +20,10 @@ RUN npm install
 RUN npm install -g @angular/cli@7.3.9
 
 # add app
-COPY . /app
+COPY . .
 
-# start app
-CMD ng serve --host 0.0.0.0
+
+#stage 2
+
+FROM nginx:alpine
+COPY --from=node /app/dist/BarFrontend /usr/share/nginx/html
