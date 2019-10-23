@@ -23,6 +23,6 @@ export class LiveFeedComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cmsService.getLiveFeedPages().subscribe(pages => { this.pages = pages; console.log(this.pages);});
+    this.cmsService.getLiveFeedPages().subscribe(pages => { this.pages = pages; console.log(this.pages); });
   }
 }
