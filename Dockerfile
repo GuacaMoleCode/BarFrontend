@@ -1,7 +1,5 @@
-#stage 1
-
-# base image
-FROM node:12.2.0
+# Build
+FROM node:12.2.0 as build-step
 
 # install chrome for protractor tests
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -20,10 +18,13 @@ RUN npm install
 RUN npm install -g @angular/cli@7.3.9
 
 # add app
-COPY . .
+COPY . /app
 
+# Build
+RUN npm run build-prod
 
-#stage 2
-
-FROM nginx:alpine
-COPY --from=node /app/dist/BarFrontend /usr/share/nginx/html
+# Run
+FROM nginx:alpine as prod-stage
+COPY --from=build-step /app/dist/BarFrontend /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
