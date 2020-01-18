@@ -12,13 +12,13 @@ export class CmsService {
 
   constructor(private http: HttpClient) { }
 
-  public getPageBlocks(): Observable<PageBlock[]> {
-    const apiUrl = `${environment.CMSEndpoint}pageBlocks`;
-    return this.http.get<PageBlock[]>(apiUrl);
-  }
-
   public getLiveFeedPages(): Observable<LiveFeedPage[]> {
     const apiUrl = `${environment.CMSEndpoint}livefeedpages`;
     return this.http.get<LiveFeedPage[]>(apiUrl);
+  }
+
+  public getSliderPages(): Observable<object> {
+    const apiUrl = `${environment.CMSEndpoint}sliders`;
+    return this.http.get(apiUrl);
   }
 }

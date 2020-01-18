@@ -11,6 +11,14 @@ import { LiveFeedComponent } from './components/live-feed/live-feed.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DefaultBlockComponent } from './components/default-block/default-block.component';
 import { ScriptService } from './services/script/script.service';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { MapComponent } from './components/map/map.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { StaffComponent } from './components/staff/staff.component';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
@@ -26,7 +34,15 @@ const appRoutes: Routes = [
     SliderBlockComponent,
     LiveFeedComponent,
     PageNotFoundComponent,
-    DefaultBlockComponent
+    DefaultBlockComponent,
+    AboutUsComponent,
+    ContactComponent,
+    CounterComponent,
+    FooterComponent,
+    GalleryComponent,
+    MapComponent,
+    MenuComponent,
+    StaffComponent
   ],
   imports: [
     BrowserModule,

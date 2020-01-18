@@ -1,31 +1,6 @@
-/*
-  Template Name: OsteriaX
-  Author : MarkUps
-  Author URI: http://www.markups.io/
-  Version: 1.0
-  Tags: light, white, restaurant, multi page, landing page, custom-colors, Bootstrap, responsive, html5, css3, Sass, template, web template
-
-*/
-
-/* Table of Content
-==================================================
-#BASIC TYPOGRAPHY
-#HEADER SECTION
-#NAVBAR SECTION
-#DEFAULT SECTION
-#SLIDER SECTION
-#ABOUT US SECTION
-#COUNTER SECTION
-#MENU ITEM SECTION
-#RESERVATION SECTION
-#GALLERY SECTION
-#TESTIMONIAL SECTION
-#CHEF SECTION
-#CONTACT SECTION
-#MAP SECTION
-#FOOTER SECTION
-#RESPONSIVE DESIGN
-*/
+.header-color {
+  color: #468847;
+}
 
 body {
   background-color: #ffffff;
