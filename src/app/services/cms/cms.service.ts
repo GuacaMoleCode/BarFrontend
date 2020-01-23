@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { PageBlock } from 'src/app/models/PageBlock';
 import { environment } from 'src/environments/environment';
 import { LiveFeedPage } from 'src/app/models/LiveFeedPage';
+import { HeaderSliderPages } from 'src/app/models/HeaderSliderPages';
+import { SiteConfiguration } from 'src/app/models/SiteConfiguration';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +19,13 @@ export class CmsService {
     return this.http.get<LiveFeedPage[]>(apiUrl);
   }
 
-  public getSliderPages(): Observable<object> {
-    const apiUrl = `${environment.CMSEndpoint}sliders`;
-    return this.http.get(apiUrl);
+  public getSliderPages(): Observable<HeaderSliderPages[]> {
+    const apiUrl = `${environment.CMSEndpoint}headersliderpages`;
+    return this.http.get<HeaderSliderPages[]>(apiUrl);
+  }
+
+  public getSiteconfiguration(): Observable<SiteConfiguration[]> {
+    const apiUrl = `${environment.CMSEndpoint}siteconfigurations`;
+    return this.http.get<SiteConfiguration[]>(apiUrl);
   }
 }

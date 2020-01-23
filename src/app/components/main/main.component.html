@@ -1,19 +1,19 @@
 <app-navigation-bar></app-navigation-bar>
 
-<app-slider-block></app-slider-block>
+<app-slider-block *ngIf="config.HeaderSlider_Zichtbaar"></app-slider-block>
 
-<app-about-us></app-about-us>
+<app-about-us *ngIf="config.OverOns_Zichtbaar"></app-about-us>
 
 <app-counter></app-counter>
 
-<app-menu></app-menu>
+<app-menu *ngIf="config.Menu_Zichtbaar"></app-menu>
 
-<app-gallery></app-gallery>
+<app-gallery *ngIf="config.Gallerij_Zichtbaar"></app-gallery>
 
-<app-staff></app-staff>
+<app-staff *ngIf="config.Personeel_Zichtbaar"></app-staff>
 
-<app-contact></app-contact>
+<app-contact *ngIf="config.Contact_Zichtbaar"></app-contact>
 
 <app-map></app-map>
 
-<app-footer></app-footer>
+<app-footer></app-footer>terminal
