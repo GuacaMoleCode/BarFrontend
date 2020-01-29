@@ -620,6 +620,7 @@ img {
 
 .mu-about-us-left {
   display: inline;
+  text-align: right;
   float: left;
   margin-top: 20px;
   padding-top: 30px;

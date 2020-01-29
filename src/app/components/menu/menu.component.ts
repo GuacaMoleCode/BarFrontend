@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CmsService } from 'src/app/services/cms/cms.service';
+import { SiteConfiguration } from 'src/app/models/SiteConfiguration';
 
 @Component({
   selector: 'app-menu',

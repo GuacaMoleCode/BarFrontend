@@ -1,10 +1,11 @@
 import { BackgroundImage } from './BackgroundImage';
 
-export class HeaderSliderPage {
+export class AboutUsPage {
+    Configuratie_Beschrijving: string;
     Titel: string;
-    SubTitel: string;
-    Beschrijving: string;
-    Achtergrond: BackgroundImage;
+    Subtitel: string;
+    Foto_Links: BackgroundImage;
+    Tekst_Rechts: string;
     Zichtbaar: boolean;
     createdAt: string;
     id: number;

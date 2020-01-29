@@ -7,4 +7,5 @@ export class SiteConfiguration {
     Personeel_Zichtbaar: boolean;
     Contact_Zichtbaar: boolean;
     LiveFeed_Aan: boolean;
+    Counter_Zichtbaar: boolean;
 }

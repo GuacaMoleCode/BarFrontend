@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CmsService } from 'src/app/services/cms/cms.service';
+import { AboutUsPage } from 'src/app/models/AboutUsPage';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-about-us',
@@ -7,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() {}
+  private aboutUs: AboutUsPage;
+  public imageEndpoint: string;
+
+  constructor(private cmsService: CmsService) {
+    this.imageEndpoint = environment.CMSEndpoint;
+  }
 
   ngOnInit() {
+    this.cmsService.getAboutUsPages().subscribe(x => this.aboutUs = x[0]);
   }
 }

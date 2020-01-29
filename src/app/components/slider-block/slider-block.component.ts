@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderSliderPages } from 'src/app/models/HeaderSliderPages';
+import { HeaderSliderPage } from 'src/app/models/HeaderSliderPages';
 import { CmsService } from 'src/app/services/cms/cms.service';
 import { environment } from 'src/environments/environment';
 import { filter, map } from 'rxjs/operators'; 
@@ -11,7 +11,7 @@ import { filter, map } from 'rxjs/operators';
 })
 export class SliderBlockComponent implements OnInit {
 
-  public pages: HeaderSliderPages[];
+  public pages: HeaderSliderPage[];
   public imageEndpoint: string;
 
   constructor(private cmsService: CmsService) {
@@ -19,7 +19,7 @@ export class SliderBlockComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cmsService.getSliderPages().subscribe(pages => { this.pages = pages.filter(x => x.Zichtbaar); console.log(this.pages); });
+    this.cmsService.getSliderPages().subscribe(pages => { this.pages = pages.filter(x => x.Zichtbaar); });
   }
 
 }

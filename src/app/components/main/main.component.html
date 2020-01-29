@@ -4,7 +4,7 @@
 
 <app-about-us *ngIf="config.OverOns_Zichtbaar"></app-about-us>
 
-<app-counter></app-counter>
+<app-counter *ngIf="config.Counter_Zichtbaar"></app-counter>
 
 <app-menu *ngIf="config.Menu_Zichtbaar"></app-menu>
 
@@ -16,4 +16,4 @@
 
 <app-map></app-map>
 
-<app-footer></app-footer>terminal
+<app-footer></app-footer>
