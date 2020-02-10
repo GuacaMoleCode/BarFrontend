@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  CMSEndpoint: 'http://localhost:1337/'
+  CMSEndpoint: 'https://cms-bottles.azurewebsites.net/'
 };
