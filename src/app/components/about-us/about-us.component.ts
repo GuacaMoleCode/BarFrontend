@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AboutUsComponent implements OnInit {
 
-  private aboutUs: AboutUsPage;
+  public aboutUs: AboutUsPage;
   public imageEndpoint: string;
 
   constructor(private cmsService: CmsService) {

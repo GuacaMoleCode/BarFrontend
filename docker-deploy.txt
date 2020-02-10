@@ -1,0 +1,2 @@
+docker build . -t frontend-barwebsite:latest
+docker-compose up
